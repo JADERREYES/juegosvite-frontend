@@ -1,0 +1,4 @@
+.question-card { text-align:center; padding:20px; }
+.options { display:grid; gap:10px; margin:20px auto; max-width:400px; }
+button.correct { background:green; color:#fff; }
+button.wrong { background:red; color:#fff; }

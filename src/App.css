@@ -1,0 +1,104 @@
+/* src/App.css */
+:root {
+  --verde-principal: #2ecc71;
+  --blanco: #ffffff;
+  --negro: #333333;
+}
+
+body {
+  background: var(--verde-principal);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  color: var(--negro);
+}
+
+h1 {
+  text-align: center;
+  color: var(--blanco);
+  text-shadow: 2px 2px var(--negro);
+  margin-bottom: 1rem;
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.selector select,
+.selector button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border: 2px solid var(--negro);
+  border-radius: 8px;
+  background: var(--blanco);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.selector select:hover,
+.selector button:hover {
+  background: var(--verde-principal);
+  color: var(--blanco);
+}
+
+.pregunta-card {
+  background: var(--blanco);
+  border: 2px solid var(--negro);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  perspective: 1000px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pregunta-card:hover {
+  transform: rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.pregunta-texto {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--negro);
+}
+
+.respuestas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.respuestas-lista li {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--negro);
+  border-radius: 8px;
+  background: var(--verde-principal);
+  color: var(--blanco);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.respuestas-lista li:hover {
+  transform: scale(1.03);
+  background: var(--negro);
+}
+
+.respuestas-lista li.correcta {
+  background: limegreen;
+  color: var(--negro);
+}
+
+.respuestas-lista li.incorrecta {
+  background: crimson;
+  color: var(--blanco);
+}
+
